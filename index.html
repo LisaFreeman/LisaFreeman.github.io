@@ -200,6 +200,14 @@
         .member-section {
             text-align: center;
             padding: 30px;
+            background: transparent;
+            box-shadow: none;
+            backdrop-filter: none;
+            border: none;
+        }
+
+        .member-section::before {
+            display: none;
         }
 
         .member-section h3 {
@@ -476,13 +484,8 @@
                  max-width: 100%;
              }
             
-            .contact-split {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
             .member-section {
-                padding: 25px 20px;
+                padding: 35px 20px;
             }
 
             .member-section h3 {
@@ -603,36 +606,33 @@
         </section>
 
         <section class="contact-section">
-            <h2>Get in Touch</h2>
-            <div class="contact-split">
-                <div class="contact-left">
-                    <div class="member-section">
-                        <a href="https://livegoodtour.com/LFreeman" class="member-btn">Secure Your Spot, Become a Member 🐝</a>
+            <h2>Need more info?</h2>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
                     </div>
                 </div>
-                <div class="contact-right">
-                    <form class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message 🐝</button>
-                    </form>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message 🐝</button>
+            </form>
+        </section>
+
+        <section class="member-section">
+            <div class="member-content">
+                <a href="https://livegoodtour.com/LFreeman" class="member-btn">Secure Your Spot, Become a Member 🐝</a>
             </div>
         </section>
 
